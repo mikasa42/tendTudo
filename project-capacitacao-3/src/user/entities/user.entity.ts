@@ -1,4 +1,4 @@
-import {  Column, Entity,PrimaryGeneratedColumn} from "typeorm";
+import {  Column, Entity,IsNull,PrimaryGeneratedColumn} from "typeorm";
 @Entity({name:'user'})
 export class User {
     @PrimaryGeneratedColumn()/*Decorador para gerar id*/
@@ -9,6 +9,8 @@ export class User {
     password:string
     @Column()
     tipo:string
+    @Column()
+    createdAt:Date
 }
 
 
