@@ -7,8 +7,8 @@ export class User {
     username:string
     @Column()
     password:string
-    @Column()
-    tipo:string
+   /* @Column()
+    tipo:string*/
     @Column()
     createdAt:Date
 }
