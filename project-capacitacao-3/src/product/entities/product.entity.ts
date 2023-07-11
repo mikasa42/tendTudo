@@ -1,4 +1,5 @@
-import { Column, Double, Entity,PrimaryGeneratedColumn } from "typeorm";
+import { User } from "src/user/entities/user.entity";
+import { Column, Double, Entity,ManyToOne,PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({name:'Product'})
 export class Product {
@@ -12,6 +13,9 @@ export class Product {
     tamanho:string /*Tamanhos PP, P, M , G, GG, XXG*/
     @Column()
     quantidade:number
+
+    @ManyToOne(() => User, user=>user.product)
+    user:User[]
 
 
 }

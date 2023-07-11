@@ -2,10 +2,15 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+import { CreateProductDto } from 'src/product/dto/create-product.dto';
 
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
+  @Post(':id/product')
+  createUserProduct(@Body() CreateProductDto: CreateProductDto){
+    return this.userService.create(CreateProductDto);/**/
+  }
 
   @Post()
   create(@Body() createUserDto: CreateUserDto) {
