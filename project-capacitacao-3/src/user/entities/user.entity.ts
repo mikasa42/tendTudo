@@ -5,11 +5,11 @@ export class User {
     @PrimaryGeneratedColumn()/*Decorador para gerar id*/
     id:number
     @Column()
-    username:string;
+    username:string;/*Nome do usuario ou cliente para efetuar o login */
     @Column()
-    password:string;
-    /*@Column()
-    tipoUsuario:string*/
+    password:string;/*Senha do usuario */
+    @Column()
+    tipoUsuario:string/*Destinção de usuario: Cliente ou Funcionario */
     @Column()
     createdAt:Date;
 

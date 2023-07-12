@@ -1,5 +1,6 @@
 export class CreateProductDto {
-    tipo:string;
+    categoria:string;
+    nome:string;
     preco:number;
     tamanho:string;
     quantidade:number;

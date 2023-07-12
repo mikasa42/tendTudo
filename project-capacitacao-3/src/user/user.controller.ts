@@ -8,7 +8,8 @@ import { Product } from 'src/product/entities/product.entity';
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
-  @Post(':id/product')
+  /*Neste metodo o cliente autenticado poderá comprar um produto */
+  @Post('/:id/product')
   createUserProduct(@Param('id') id:string,@Body() CreateProductDto: CreateProductDto){
     return this.userService.createProduct(+id,CreateProductDto);
   }

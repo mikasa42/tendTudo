@@ -4,11 +4,13 @@ import { Column, Double, Entity,ManyToMany,ManyToOne,OneToMany,PrimaryGeneratedC
 @Entity({name:'Product'})
 export class Product {
     @PrimaryGeneratedColumn()
-    id_product:number;
+    id_product:number;/*Codigo do produto */
     @Column()
-    tipo:string;
+    categoria:string;/*Categoria do produto : Vestiario, calçado, perfume e etc */
     @Column()
-    preco:number;
+    nome:string;/*Calça de couro esfumado */
+    @Column()
+    preco:number;/*Preço do produto em si */
     @Column()
     tamanho:string /*Tamanhos PP, P, M , G, GG, XXG*/
     @Column()
