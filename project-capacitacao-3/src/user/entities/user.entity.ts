@@ -5,13 +5,13 @@ export class User {
     @PrimaryGeneratedColumn()/*Decorador para gerar id*/
     id:number
     @Column()
-    username:string
+    username:string;
     @Column()
-    password:string
+    password:string;
     /*@Column()
     tipoUsuario:string*/
     @Column()
-    createdAt:Date
+    createdAt:Date;
 
     @OneToMany(()=> Product, product => product.user)
     product: Product[]
