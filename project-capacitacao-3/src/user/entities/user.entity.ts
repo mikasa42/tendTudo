@@ -1,5 +1,5 @@
 import { Product } from "src/product/entities/product.entity";
-import {  Column, Entity,IsNull,OneToMany,PrimaryGeneratedColumn} from "typeorm";
+import {  Column, Entity,IsNull,ManyToMany,OneToMany,PrimaryGeneratedColumn} from "typeorm";
 @Entity({name:'user'})
 export class User {
     @PrimaryGeneratedColumn()/*Decorador para gerar id*/
@@ -8,8 +8,8 @@ export class User {
     username:string
     @Column()
     password:string
-   /* @Column()
-    tipo:string*/
+    /*@Column()
+    tipoUsuario:string*/
     @Column()
     createdAt:Date
 

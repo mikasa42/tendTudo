@@ -1,3 +1,4 @@
+
 export class CreateProductDto {
     id:number
     tipo:string

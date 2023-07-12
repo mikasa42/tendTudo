@@ -37,7 +37,7 @@ export class UserService {
   findAll() {
     /*`This action returns all user` */
     return this.userRepository.find({
-      relations:['Product']
+      relations: ['product']
     })
   }
 

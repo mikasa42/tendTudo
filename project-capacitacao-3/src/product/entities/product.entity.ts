@@ -1,5 +1,5 @@
 import { User } from "src/user/entities/user.entity";
-import { Column, Double, Entity,ManyToOne,PrimaryGeneratedColumn } from "typeorm";
+import { Column, Double, Entity,ManyToMany,ManyToOne,OneToMany,PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({name:'Product'})
 export class Product {
@@ -15,7 +15,7 @@ export class Product {
     quantidade:number
 
     @ManyToOne(() => User, user=>user.product)
-    user:User[]
+    user:User
 
 
 }
