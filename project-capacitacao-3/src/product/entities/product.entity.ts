@@ -4,7 +4,7 @@ import { Column, Double, Entity,ManyToMany,ManyToOne,OneToMany,PrimaryGeneratedC
 @Entity({name:'Product'})
 export class Product {
     @PrimaryGeneratedColumn()
-    id:number
+    id_product:number
     @Column()
     tipo:string
     @Column()
