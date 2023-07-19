@@ -8,7 +8,7 @@ export class User {
     username:string;/*Nome do usuario ou cliente para efetuar o login */
     @Column()
     password:string;/*Senha do usuario */
-    @Column()
+   /* @Column()
     tipoUsuario:string/*Destinção de usuario: Cliente ou Funcionario */
     @Column()
     createdAt:Date;

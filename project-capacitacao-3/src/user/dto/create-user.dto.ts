@@ -1,7 +1,7 @@
 export class CreateUserDto {
     username:string;
     password:string;
-    tipoUsuario:string;
+    /*tipoUsuario:string;*/
 
 }
 /* Data transfer objects*/
